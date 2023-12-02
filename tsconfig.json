@@ -12,6 +12,7 @@
         // позволяет обрабатывать не только ts, но и js
         "allowJs": true,
         "moduleResolution": "node",
+        "baseUrl": ".",
         // позволяет работать с commonjs пакетами как с модулями
         "esModuleInterop": true,
         // позволяет включить default import у библиотек, которые
