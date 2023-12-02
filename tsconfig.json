@@ -1,0 +1,26 @@
+{
+    "compilerOptions": {
+        // куда идёт сборка (неважно, т.к. сборка с помощью webpack)
+        "outDir": "./dist/",
+        // отвечает за возможность указать тип any
+        "noImplicitAny": true,
+        // какую модульную систему использовать
+        "module": "ESNext",
+        // в какую спецификацию js будет компиляция
+        "target": "es5",
+        "jsx": "react",
+        // позволяет обрабатывать не только ts, но и js
+        "allowJs": true,
+        "moduleResolution": "node",
+        // позволяет работать с commonjs пакетами как с модулями
+        "esModuleInterop": true,
+        // позволяет включить default import у библиотек, которые
+        // не поддерживают данную возможность
+        "allowSyntheticDefaultImports": true
+    },
+    "ts-node": {
+        "compilerOptions": {
+           "module": "CommonJS"
+        }
+    }    
+}
