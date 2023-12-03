@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./Counter.scss";
+import classes from "./Counter.module.scss";
 
 const Counter = () => {
     const [count, setCount] = useState(0);
@@ -10,8 +10,18 @@ const Counter = () => {
     return (
         <div>
             <h2>Value: {count}</h2>
-            <button onClick={increase}>increment</button>
-            <button onClick={decrease}>decrement</button>
+            <button
+                className={classes.btn}
+                onClick={increase}
+            >
+                increment
+            </button>
+            <button
+                className={classes.btn}
+                onClick={decrease}
+            >
+                decrement
+            </button>
         </div>
     );
 };
