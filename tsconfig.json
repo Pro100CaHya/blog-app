@@ -13,6 +13,9 @@
         "allowJs": true,
         "moduleResolution": "node",
         "baseUrl": ".",
+        "paths": {
+            "*": ["./src/*"]
+        },
         // позволяет работать с commonjs пакетами как с модулями
         "esModuleInterop": true,
         // позволяет включить default import у библиотек, которые
