@@ -7,8 +7,8 @@ export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
 
     const svgLoader = {
         test: /\.svg$/,
-        use: ["@svgr/webpack"]
-    }
+        use: ["@svgr/webpack"],
+    };
 
     const babelLoader = {
         test: /\.(js|jsx|tsx)$/,
@@ -17,25 +17,25 @@ export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
             loader: "babel-loader",
             options: {
                 presets: ["@babel/preset-env"],
-                "plugins": [
+                plugins: [
                     [
                         "i18next-extract",
                         {
                             locales: ["ru", "en"],
-                            keyAsDefaultValue: true
-                        }
+                            keyAsDefaultValue: true,
+                        },
                     ],
-                ]
-            }
-        }
-    }
+                ],
+            },
+        },
+    };
 
     const fileLoader = {
         test: /\.(png|jpe?g|gif)$/i,
         use: {
-            loader: "file-loader"
-        }
-    }
+            loader: "file-loader",
+        },
+    };
 
     const cssLoader = {
         test: /\.s[ac]ss$/i,
@@ -51,9 +51,9 @@ export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
                         localIdentName:
                             isDev
                                 ? "[path][name]__[local]"
-                                : "[hash:base64:8]"
-                    }
-                }
+                                : "[hash:base64:8]",
+                    },
+                },
             },
             "sass-loader",
         ],
@@ -70,6 +70,6 @@ export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
         svgLoader,
         babelLoader,
         typeScriptLoader,
-        cssLoader
+        cssLoader,
     ];
 }
